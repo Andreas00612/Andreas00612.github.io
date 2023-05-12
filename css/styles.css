@@ -10965,3 +10965,46 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+}
+
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+
+.typing-text {
+  width: 1em;
+  border-right: .05em solid;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(8), caret 0.5s steps(1) infinite;
+  font-size: 20px; /* 調整字體大小 */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
