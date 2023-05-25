@@ -31,6 +31,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+   /*旁邊背景顏色*/
   --bs-primary-rgb: 189, 93, 56;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -11070,4 +11071,8 @@ a.icon-link:hover {
   stroke-width: 5;
   margin: 0;
   transform: rotate(15deg);
+}
+
+.black-background {
+  background-color: black;
 }

@@ -18,6 +18,7 @@
 </head>
 <body id="page-top">
 <!-- Navigation-->
+<!-- bg-primary 是背景顏色-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Andrew Lin</span>
@@ -25,7 +26,7 @@
                                              src="assets/img/personal.jpg" alt="..."/></span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation "><span
             class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
@@ -45,7 +46,7 @@
         <div class="resume-section-content">
             <h1 class="mb-0">
                 <span style="text-transform: capitalize;">林希儒</span>
-                <span style="text-transform: capitalize; color: blue;">Andrew Lin</span>
+                <span style="text-transform: capitalize; color: lightslategrey;">Andrew Lin</span>
             </h1>
             <div class="subheading_s mb-5">
                 一位在產學合作實驗室以深度學習為主題完成碩士學位的應屆畢業生 <br>
@@ -68,15 +69,15 @@
     <section class="resume-section" id="experience">
         <div class="resume-section-content">
             <h2 class="mb-5">個人作品</h2>
+
+            <!-- 遠端及時心律測量-->
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">遠端及時心律測量</h3>
-
                     <div class="subheading mb-3">Remote real-time heart rate monitoring
                     </div>
 
-                    <p> rPPG 是一個非接觸式心律測量的方法，傳統上如果是要測量心律都要透過接觸式
-                        裝置來測量患者心律，易造成患者長時間配戴不舒服，因此非接觸式裝置對於患者來
+                    <p> rPPG 是一個非接觸式心律測量的方法，傳統上如果是要測量心律都要透過接觸式裝置來測量患者心律，易造成患者長時間配戴不舒服，因此非接觸式裝置對於患者來
                         說是相當重要的。技術的原理是在臉部區域(尤其是額頭跟臉頰)的顏色變化會隨著心
                         律而有所改變，因此可以透過一定時間的臉部資料訓練模型自動將影片連續臉部資訊
                         轉換成 PPG 訊號，再利用FFT將PPG訊號轉換成即時心律。</p>
@@ -85,13 +86,11 @@
                         <span class="button-text">Read More</span>
                         <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
                     </a>
-
-
                 </div>
-
                 <div class="flex-shrink-0"><span class="text-primary">January 2021 - May 2021 </span></div>
             </div>
 
+            <!-- 雷達訊號分類任務-->
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">雷達訊號分類任務</h3>
@@ -99,8 +98,7 @@
                     <p> &nbsp;&nbsp;&nbsp;&nbsp;現在的雷達訊號非常的多且複雜，所以不論是做訊號拆解或是雷達訊號分類都已經無
                         法利用傳統分析雷達技術來做應用。我們在此題目中用到了BERT的預訓練來做
                         transfer learning，因為在時間軸上每個雷達訊號都有相互的關係，透過BERT model來
-                        觀察裡面的時間與雷達資訊的交互關係，而目前的分類任務在高頻跟中頻的雷達正確率都
-                        有95%以上，而低頻訊號相對於中高頻訊號因為出現的次數非常少又容易被遮蔽，導致非常難做分類，
+                        觀察裡面的時間與雷達資訊的交互關係，而目前的分類任務在高頻跟中頻的雷達正確率都有95%以上，而低頻訊號相對於中高頻訊號因為出現的次數非常少又容易被遮蔽，導致非常難做分類，
                         但最後也將正確率都提升至50%(待確認)以上。</p>
                     <a class="button" href="./project-pages/Radar.html">
                         <span class="button-text">Read More</span>
@@ -109,6 +107,8 @@
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">June 2021 - March 2022</span></div>
             </div>
+
+            <!-- 屏幕下指紋心律偵測-->
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">屏幕下指紋心律偵測</h3>
@@ -122,14 +122,16 @@
                             </a>
                         </div>
                     </div>
-
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
             </div>
+
+
+            <!-- 指定區域生成物件-->
             <div class="d-flex flex-column flex-md-row justify-content-between">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">指定區域生成物件(待定)</h3>
-                    <div class="subheading mb-3">Shout! Media Productions</div>
+                    <div class="subheading mb-3">指定區域生成物件(待定)</div>
                     <div class="marquee-container">
                         <div class="marquee-content">
                             <p>指定區域生成物件-撰寫中</p>
@@ -142,10 +144,13 @@
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
             </div>
+
+
+            <!-- CityScape風格轉換-->
             <div class="d-flex flex-column flex-md-row justify-content-between">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">CityScape風格轉換(待定)</h3>
-                    <div class="subheading mb-3">Shout! Media Productions</div>
+                    <div class="subheading mb-3">CityScape風格轉換</div>
                     <div class="marquee-container">
                         <div class="marquee-content">
                             <p>CityScape風格轉換-撰寫中</p>
@@ -158,6 +163,27 @@
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
             </div>
+
+
+            <!-- rgb to IR -->
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">彩色影像轉紅外線影像</h3>
+                    <div class="subheading mb-3">彩色影像轉紅外線影像</div>
+                    <div class="marquee-container">
+                        <div class="marquee-content">
+                            <p>彩色影像轉紅外線影像-撰寫中</p>
+                            <a class="button" href="./project-pages/IR.html">
+                                <span class="button-text">Read More</span>
+                                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
+            </div>
+
+
         </div>
     </section>
     <hr class="m-0"/>
