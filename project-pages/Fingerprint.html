@@ -78,37 +78,28 @@
       - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
     -->
     <div id="project-details">
+        <div class="subheader-text">使用程式：C++</div>
+
+
         <div class="subheader-text">特色與說明</div>
         <div class="project-details-content">
             <div class="body-text">
                 <ol>
                     <li>無需閃光燈與鏡頭</li>
                     <li>因畫素需求低所以運算速度快</li>
-                    <li>使用C++並在手機實測通過</li>
                 </ol>
             </div>
             <div class="body-text">
-                心率檢測是一個廣泛應用於醫療和健康領域的重要技術。現代科技使得使用手機或其他影像設備進行非接觸式心率檢測成為可能。下面將以文章的方式描述心率檢測的兩個階段：訊號收集與訊號前處理，以及心率的計算與穩定機制。
+                <p>
+                    &emsp;&emsp;在第一階段，我們需要收集並處理來自影像資訊的訊號。首先，從影像源（例如攝像頭）讀取影像資訊。為了提取脈搏信息，我們對收集到的影像進行綠色通道的遮罩。
+                    這是因為綠色光在血液中的吸收和反射特性較高，可以更好地反映心跳的變化，增強脈搏信號的可見度。我們將為影像中的不同區域分配不同的權重，使用加權區域的脈搏信號來進行運算。
+                </p>
+                <p>
+                    &emsp;&emsp;在第二階段，我們將進行心率的計算並引入穩定機制以提高準確性和可靠性。首先，我們將對處理過的心率訊號進行傅立葉轉換，以獲得頻率域的訊息。通過進行頻率分析，我們可以檢測心跳的周期性變化。
+                    然而，由於環境條件和其他因素的影響，單純的頻率分析可能會引入一些誤差。因此，我們需要引入心率修正機制。這可以通過先前的心率測量值來實現，提高計算心率的準確性。
+                    此外，我們還可以使用投票機制來再次提高心率的穩定性。心率計算的結果可能會因不同的算法或方法而略有差異。通過將多個心率計算結果結合起來，我們可以減少誤差並獲得更穩定和可靠的心率估計。
+                </p>
 
-                第一階段：訊號收集與訊號前處理
-
-                在心率檢測的第一階段中，我們需要收集並處理來自影像資訊的訊號。首先，從影像源（例如攝像頭）讀取影像資訊。這些影像資訊中包含了人體的脈搏信息，我們需要將其提取出來進行進一步的分析。
-
-                為了提取脈搏信息，我們對收集到的影像進行綠色通道的遮罩。這是因為綠色光在血液中的吸收和反射特性較高，可以更好地反映心跳的變化。因此，通過提取影像中的綠色通道，我們可以增強脈搏信號的可見度。
-
-                接下來，我們將為影像中的不同區域分配不同的權重。這是為了改善心率計算的準確性。例如，人臉區域通常具有較高的脈搏信號強度，我們可以給予該區域更高的權重。在計算心率時，我們使用這些加權區域的脈搏信號來進行運算，例如進行信號處理和頻率分析。
-
-                最後，我們將從不同區域獲得的心率計算結果進行加總。由於不同區域的脈搏信號可能具有不同的強度，因此我們需要對這些結果進行正規化，以確保心率數值在合理範圍內。
-
-                第二階段：心率的計算與穩定機制
-
-                在第二階段，我們將進行心率的計算並引入穩定機制以提高準確性和可靠性。首先，我們將對處理過的心率訊號進行傅立葉轉換，以獲得頻率域的訊息。通過進行頻率分析，我們可以檢測心跳的周期性變化，這將有助於更精確地計算心率。
-
-                然而，由於環境條件和其他因素的影響，單純的頻率分析可能會引入一些誤差。因此，我們需要引入心率修正機制。這可以通過先前的心率測量值和模型來實現，以消除噪聲和偏差，提高計算心率的準確性。
-
-                此外，我們還可以使用投票機制來提高心率的穩定性。心率計算的結果可能會因不同的算法或方法而略有差異。通過將多個心率計算結果結合起來，我們可以減少誤差並獲得更穩定和可靠的心率估計。
-
-                綜上所述，這是一個兩階段的心率檢測流程。第一階段主要涉及訊號收集與訊號前處理，包括讀取影像資訊、綠色通道的遮罩、給予不同區域權重並做計算、以及加總和正規化。第二階段則涉及心率的計算與穩定機制，包括傅立葉轉換、心率修正和投票機制。這些步驟結合了影像處理、信號處理和數學分析等技術，可以提供非接觸式的心率檢測功能，並有助於健康監測和醫療應用的發展。
             </div>
         </div>
     </div>
@@ -116,34 +107,12 @@
     <!-- IMAGE GALLERY -->
     <div id="project-gallery">
         <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
-        <div class="subheader-text">Image Gallery</div>
+        <div class="subheader-text">Demo</div>
         <div class="project-gallery-content">
-            <!--
-              TODO
 
-              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
-
-              Full Width Image:
-
-                <div class="gallery-image-container">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              Half Width Image:
-
-                <div class="gallery-image-container half-width">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
-                  - IMAGE_NAME: the name of the image file in assets/images
-                  - IMAGE_CAPTION: to the caption of the image
-            -->
             <div class="gallery-image-container half-width">
-                <img src="../assets/images/code.jpeg" class="gallery-image">
-                <span class="image-caption">Give your image a caption. People love context.</span>
+                <img src="../assets/images/HR_demo.PNG" class="gallery-image">
+                <span class="image-caption">利用指夾式心律來驗證正確與否</span>
             </div>
             <div class="gallery-image-container half-width">
                 <img src="../assets/images/sketchbook.jpeg" class="gallery-image">
@@ -155,34 +124,40 @@
             </div>
         </div>
     </div>
+
+    <div class="button-containera">
+        <a class="button" href="GAN2.html">
+            <span class="button-text">Next Project：指定區域物件生成 </span>
+            <img src="/assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+        </a>
+        <a class="button" href="另一個HTML檔案的路徑">
+            <span class="button-text">另一個按鈕的文本2</span>
+            <img src="/assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+        </a>
+    </div>
+    <!--    <div class="button-container">-->
+    <!--        <a class="button" href="GAN2.html">-->
+    <!--            <span class="button-text">Previous Project：指定區域物件生成 </span>-->
+    <!--            <img src="/assets/icons/arrow-right.svg" class="right-arrow-icon"/>-->
+    <!--        </a>-->
+
+    <!--        <a class="button" href="GAN2.html">-->
+    <!--            <span class="button-text">Next Project：指定區域物件生成</span>-->
+    <!--            <img src="/assets/icons/arrow-right.svg" class="right-arrow-icon"/>-->
+    <!--        </a>-->
+    <!--    </div>-->
+    <!--    <a class="button" href="GAN2.html">-->
+    <!--        <span class="button-text">Next Project：指定區域物件生成 </span>-->
+    <!--        <image src="/assets/icons/arrow-right.svg" class="right-arrow-icon"/>-->
+    <!--    </a>-->
+    <!--    <a lass="button" href="GAN2.html">-->
+    <!--        <span class="button-text">另一個按鈕的文本</span>-->
+    <!--        <image src="/assets/icons/arrow-right.svg" class="right-arrow-icon"/>-->
+    <!--    </a>-->
+
+
 </div>
-<!-- FOOTER -->
-<div id="footer">
-    <!--
-      TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram)
 
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
-    </a>
-    <!--
-      TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter)
-
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-    </a>
-    <!--
-      TODO - Change the email after "mailto" to your contact email
-
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
-    </a>
-</div>
 
 </body>
 </html>

@@ -11076,3 +11076,25 @@ a.icon-link:hover {
 .black-background {
   background-color: black;
 }
+
+.button-containera {
+  text-align: center;
+}
+
+.button-wrapper {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.button {
+  display: block;
+  text-align: center;
+}
+
+.button-text {
+  display: inline-block;
+}
+
+.right-arrow-icon {
+  display: inline-block;
+}
