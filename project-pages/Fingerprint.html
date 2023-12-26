@@ -42,14 +42,6 @@
           (this should be the same across all pages)
          -->
         <span class="nav-title">Portfolio Title</span>
-        <!--
-          TODO - Change the email after 'mailto:' to your email address for contact
-
-          (this should be the same across all pages)
-        -->
-        <a class="button" href="mailto:whitevans.eth@gmail.com">
-            <span class="button-text">Contact Me</span>
-        </a>
     </a>
 </div>
 
@@ -77,30 +69,62 @@
       - Change the 'subheader-text' to whatever header you want for project details
       - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
     -->
-    <div id="project-details">
-        <div class="subheader-text">使用程式：C++</div>
+      <div id="project-details">
+        <div class="custom-style-pro">使用程式：Python
 
-
-        <div class="subheader-text">特色與說明</div>
-        <div class="project-details-content">
-            <div class="body-text">
-                <ol>
-                    <li>無需閃光燈與鏡頭</li>
-                    <li>因畫素需求低所以運算速度快</li>
-                </ol>
+            <h2>特色與說明</h2>
+            <div class="feature-description">
+                <ul>
+                    <li>遠距離測量無接觸式裝置</li>
+                    <li>利用模型與自注意力機制穩定rPPG訊號的轉換</li>
+                </ul>
             </div>
-            <div class="body-text">
-                <p>
-                    &emsp;&emsp;在第一階段，我們需要收集並處理來自影像資訊的訊號。首先，從影像源（例如攝像頭）讀取影像資訊。為了提取脈搏信息，我們對收集到的影像進行綠色通道的遮罩。
-                    這是因為綠色光在血液中的吸收和反射特性較高，可以更好地反映心跳的變化，增強脈搏信號的可見度。我們將為影像中的不同區域分配不同的權重，使用加權區域的脈搏信號來進行運算。
-                </p>
-                <p>
-                    &emsp;&emsp;在第二階段，我們將進行心率的計算並引入穩定機制以提高準確性和可靠性。首先，我們將對處理過的心率訊號進行傅立葉轉換，以獲得頻率域的訊息。通過進行頻率分析，我們可以檢測心跳的周期性變化。
-                    然而，由於環境條件和其他因素的影響，單純的頻率分析可能會引入一些誤差。因此，我們需要引入心率修正機制。這可以通過先前的心率測量值來實現，提高計算心率的準確性。
-                    此外，我們還可以使用投票機制來再次提高心率的穩定性。心率計算的結果可能會因不同的算法或方法而略有差異。通過將多個心率計算結果結合起來，我們可以減少誤差並獲得更穩定和可靠的心率估計。
-                </p>
 
+            <h2>第一階段 - 影像資訊收集與處理</h2>
+            <div class="feature-description">
+                <ul>
+                    <li>收集影像資訊：
+                        <div class="body-text">
+                            <ul>
+                                <li>來自無接觸式裝置（例如攝像頭）讀取影像資訊。</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>綠色通道遮罩：
+                        <ul>
+                            <li>對收集到的影像進行綠色通道的遮罩，以提取有效的PPG信息。</li>
+                            <li>綠色光在血液中的吸收和反射特性較高，更能反映心跳的變化，增強PPG信號的可見度。</li>
+                        </ul>
+                    </li>
+                    <li>權重分配：
+                        <ul>
+                            <li>為影像中的不同區域分配不同的權重，用於計算加權區域的PPG信號。</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+            <h2>第二階段 - 心率計算與穩定機制</h2>
+            <ul>
+                <li>心率計算：
+                    <ul>
+                        <li>對處理過的心率訊號進行傅立葉轉換，獲得頻率域的訊息。</li>
+                        <li>通過頻率分析檢測心律的周期性變化。</li>
+                    </ul>
+                </li>
+                <li>心率修正機制：
+                    <ul>
+                        <li>引入心率修正機制以提高計算的準確性。</li>
+                        <li>利用先前的心率測量值進行修正，考慮環境條件和其他因素的影響。</li>
+                    </ul>
+                </li>
+                <li>投票機制：
+                    <ul>
+                        <li>使用投票機制提高心率的穩定性。</li>
+                        <li>考慮不同算法或方法的心率計算結果，通過結合多個結果來減少誤差，獲得更穩定和可靠的心率估計。</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -126,13 +150,13 @@
 <!--        <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>-->
 <!--    </a>-->
     <div class="buttonp-container">
-        <a class="button" href="GAN2.html">
+        <a class="button" href="Radar.html">
             <image src="/assets/icons/arrow-left.png" class="right-arrow-icon"/>
-            <span class="button-text">Read More</span>
+            <span class="button-text">盲訊號雷達分類任務</span>
 
         </a>
-        <a class="button" href="Radar.html">
-            <span class="button-text">Read More</span>
+        <a class="button" href="GAN2.html">
+            <span class="button-text">指定區域物件遮罩生成</span>
             <image src="/assets/icons/arrow-right (1).png" class="right-arrow-icon"/>
         </a>
     </div>

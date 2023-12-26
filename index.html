@@ -79,13 +79,13 @@
 
                 <li class="timeline-item">
                     <span class="date">110.1-110.6</span>
-                    <div class="project"><a href="#rppg">遠端即時心律測量</a></div>
+                    <div class="project"><a href="#rppg">遠端即時心律測量系統</a></div>
                     <div class="description">工研院</div>
                 </li>
 
                 <li class="timeline-item">
                     <span class="date">111.7-111.12</span>
-                    <div class="project"><a href="#GAN1">指定物件Mask生成</a></div>
+                    <div class="project"><a href="#GAN1">指定區域物件遮罩生成</a></div>
                     <div class="description">中科院</div>
                 </li>
 
@@ -97,19 +97,20 @@
 
                 <li class="timeline-item">
                     <span class="date">111.8-112.1</span>
-                    <div class="project"><a href="#screenHR">屏幕下指紋生成</a></div>
+                    <div class="project"><a href="#screenHR">屏幕下指紋心律轉換</a></div>
                     <div class="description">上市櫃公司產學計畫</div>
                 </li>
 
                 <li class="timeline-item">
                     <span class="date">111.1-111.6</span>
-                    <div class="project"><a href="#styletransfer">CityScape風格轉換</a></div>
+                    <div class="project"><a href="#styletransfer">程式街景風格轉換</a></div>
                     <div class="description">中科院</div>
                 </li>
 
                 <li class="timeline-item">
                     <span class="date">112.1-112.7</span>
-                    <div class="project"><a href="#paper">可見光轉紅外線影像</a></div>
+                    <div class="project"><a href="#paper">FreqShifted-Net：用於可見光到紅外線圖像轉換
+                    </a></div>
                     <div class="description">中科院&碩士論文</div>
                 </li>
 
@@ -146,8 +147,9 @@
                         <p>python</p>
                     </div>
                 </div>
-                <p> rPPG 是一個非接觸式心律測量的方法，傳統上如果是要測量心律都要透過接觸式裝置來測量患者心律。透過攝影機收集使用者的臉部特徵，並利用模型將特徵轉換成rPPG訊號，利用傅立葉轉換將訊號轉換成穩定的即時心律.
-</p>
+                <p> rPPG
+                    是一個非接觸式心律測量的方法，傳統上如果是要測量心律都要透過接觸式裝置來測量患者心律。透過攝影機收集使用者的臉部特徵，並利用模型將特徵轉換成rPPG訊號，利用傅立葉轉換將訊號轉換成穩定的即時心律.
+                </p>
 
                 <a class="button" href="./project-pages/RPPG.html">
                     <span class="button-text">Read More</span>
@@ -180,9 +182,8 @@
                         <p>python</p>
                     </div>
                 </div>
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;我們在此題目中用到了BERT的預訓練來做
-                    transfer learning，因為在時間軸上每個雷達訊號都有相互的關係，透過BERT model來
-                    觀察裡面的時間與雷達資訊的交互關係，而目前的分類任務在高頻跟中頻的雷達正確率都有95%以上。</p>
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;藉由輸入雷達訊號的相關參數(PRF，PW)產生隨機雷達訊號，並透過BERT模型去做transfer
+                    Learning，訓練此模型準確地分析出此時有哪個頻段的雷達訊號開啟，其中高頻與中頻的雷達皆可達到90%以上的正確率。</p>
                 <a class="button" href="./project-pages/Radar.html">
                     <span class="button-text">Read More</span>
                     <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
@@ -246,10 +247,10 @@
                 <p>指定區域生成物件-撰寫中</p>
 
 
-                <a class="button" href="./project-pages/GAN2.html">
-                    <span class="button-text">Read More</span>
-                    <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-                </a>
+                <!--                <a class="button" href="./project-pages/GAN2.html">-->
+                <!--                    <span class="button-text">Read More</span>-->
+                <!--                    <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>-->
+                <!--                </a>-->
 
             </div>
             <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
@@ -259,7 +260,7 @@
         <!-- CityScape風格轉換-->
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="styletransfer">
             <div class="flex-grow-1">
-                <h3 class="mb-0">CityScape風格轉換(待定)</h3>
+                <h3 class="mb-0">城市街景風格轉換</h3>
                 <div class="subheading mb-3">CityScape風格轉換</div>
                 <div class="keyword-box-container">
                     <div class="keyword-box">
@@ -282,10 +283,10 @@
                     </div>
                 </div>
 
-                <a class="button" href="./project-pages/style_transfer.html">
-                    <span class="button-text">Read More</span>
-                    <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-                </a>
+                <!--                <a class="button" href="./project-pages/style_transfer.html">-->
+                <!--                    <span class="button-text">Read More</span>-->
+                <!--                    <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>-->
+                <!--                </a>-->
 
             </div>
             <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
@@ -295,8 +296,8 @@
         <!-- rgb to IR -->
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="paper">
             <div class="flex-grow-1">
-                <h3 class="mb-0">彩色影像轉紅外線影像</h3>
-                <div class="subheading mb-3">彩色影像轉紅外線影像</div>
+                <h3 class="mb-0">FreqShifted-Net：用於可見光到紅外線圖像轉換</h3>
+                <div class="subheading mb-3">FreqShifted-Net,Networks for Visible-to-Infrared Image</div>
                 <div class="keyword-box-container">
                     <div class="keyword-box">
                         <p></p>
@@ -317,7 +318,7 @@
                 </div>
                 <div class="marquee-container">
                     <div class="marquee-content">
-                        <p>彩色影像轉紅外線影像-撰寫中</p>
+                        <p>FreqShifted-Net：用於可見光到紅外線圖像轉換-撰寫中</p>
 
                     </div>
                 </div>
