@@ -220,4 +220,38 @@ body {
 }
 
 
+/* Define a class named "custom-style" */
+.custom-style-pro {
+  font-family: Arial, sans-serif;
+}
+
+.custom-style-pro h2 {
+  font-weight: bold;
+  line-height: 0.5;
+}
+
+.custom-style-pro ul {
+  list-style-type: upper-roman;
+  margin-left: 10px;
+  line-height: 1.2;
+  margin-top: -0.1em; /* 向上高度為 1.0 */
+  margin-bottom: 0.4em; /* 向下高度為 1.2 */
+}
+
+.custom-style-pro ul ul {
+  list-style-type: circle;
+  margin-left: 5px;
+  line-height: 1.2;
+}
+
+.custom-style-pro li {
+  line-height: 1.5;
+}
+
+.custom-style-pro .body-text {
+  line-height: 1; /* Adjust line height for body text */
+}
+.custom-style-pro .feature-description {
+  line-height: 1; /* Adjust line height for feature description */
+}
 
