@@ -47,23 +47,23 @@
             <h2>第一階段 - 雷達訊號模擬</h2>
             <div class="feature-description">
                 <ul>
-                    <li>收集影像資訊：
+                    <li>Generate TOA
                         <div class="body-text">
                             <ul>
-                                <li>來自無接觸式裝置（例如攝像頭）讀取影像資訊。</li>
+                                <li>根據每組不同雷達的TOA(Time of arrival)以及PW(pulse width)做各個雷達訊號的生成</li>
                             </ul>
                         </div>
                     </li>
 
-                    <li>綠色通道遮罩：
+                    <li>Mixed TOA：
                         <ul>
-                            <li>對收集到的影像進行綠色通道的遮罩，以提取有效的PPG信息。</li>
-                            <li>綠色光在血液中的吸收和反射特性較高，更能反映心跳的變化，增強PPG信號的可見度。</li>
+                            <li>每組的雷達訊號去做時間頻域上的重疊</li>
+
                         </ul>
                     </li>
-                    <li>權重分配：
+                    <li>Expansion TOA：
                         <ul>
-                            <li>為影像中的不同區域分配不同的權重，用於計算加權區域的PPG信號。</li>
+                            <li>據已重疊的雷達訊號，找到該重疊處的TOA以及PW，並將該重疊處視為一個完整的雷達訊號波</li>
                         </ul>
                     </li>
                 </ul>
@@ -103,16 +103,16 @@
     <!-- IMAGE GALLERY -->
     <div id="project-gallery">
         <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
-        <div class="subheader-text">Demo</div>
+        <div class="subheader-text">網路及架構</div>
         <div class="project-gallery-content">
 
             <div class="gallery-image-container half-width">
-                <img src="../assets/images/rppg_demo.PNG" class="gallery-image">
-                <span class="image-caption">利用指夾式心律來驗證正確與否</span>
+                <img src="../assets/images/Fnet.png" class="gallery-image">
+                <span class="image-caption">Fnet網路架構</span>
             </div>
             <div class="gallery-image-container half-width">
-                <img src="../assets/images/rppg_result.PNG" class="gallery-image">
-                <span class="image-caption">我們提出的方法在各項數據上皆有好的表現</span>
+                <img src="../assets/images/radar_system.png" class="gallery-image">
+                <span class="image-caption">雷達系統架構圖</span>
             </div>
 
         </div>
