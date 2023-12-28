@@ -41,7 +41,7 @@
 
           (this should be the same across all pages)
          -->
-        <span class="nav-title">Portfolio Title</span>
+        <span class="nav-title">Home</span>
         <!--
           TODO - Change the email after 'mailto:' to your email address for contact
 
@@ -57,116 +57,160 @@
 <div id="main-content">
     <!-- PROJECT HEADER -->
     <div id="project-header">
-        <!--
-          TODO
-
-          - Change the 'main-title' text to the name of your project
-          - Change the 'body-text' text to a short and sweet description of your project (maybe the same as the one on the project card)
-          - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
-        -->
-        <div class="main-title">彩色影像轉紅外線影像 </div>
-        <div class="body-text">A small description about the project goes here, get the reader hooked on the project and
-            tell them why they should continue to read this page. Give it a sweet tagline.
+        <div class="main-title">碩士論文-可見光到紅外線圖像轉換
         </div>
-        <image class="project-header-image" src="../assets/images/desktop.jpeg">
+        <div class="subheader-text">《FreqShifted-Net：Frequency-Aware Axial-ShiftedNet
+            in Generative Adversarial Networks for Visible-to-Infrared Image》
+        </div>
+        <image class="project-header-image" src="../assets/images/IR_1.png">
+            <span class="subheader-text">
+                    上圖為我們提出的模型與SOTA所比較的結果<br>
+                    A：InfraGAN  &nbsp;&nbsp;&nbsp; B：InfraGAN並改良Loss &nbsp;&nbsp;&nbsp; C：Freq-ShiftedNet並改良Loss</span>
     </div>
 
-    <!-- PROJECT DETAILS -->
-    <!--
-      TODO
-
-      - Change the 'subheader-text' to whatever header you want for project details
-      - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
-    -->
     <div id="project-details">
-        <div class="subheader-text">Project Details / Background</div>
-        <div class="project-details-content">
-            <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper
-                risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit
-                cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas
-                sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue
-                mauris rhoncus aenean vel elit.
+        <div class="custom-style-pro">
+
+            <h2>論文摘要</h2>
+            <div class="feature-description">
+                <ul>
+                    <li>
+                        此論文的目標為將可見光圖像轉換為紅外線圖像，我們提出了Freq-ShiftedNet模型並使用對抗式生成網路的方式訓練，利用哈爾小波轉換有效的保留頻率資訊，透過模型轉換成紅外線圖像並同時保留有效的結構資訊，
+                        與InfraGAN(SOTA)模型相比，我們的模型在SSIM指標中增加了5.4%，LPIPS指標減少了41.3%
+                    </li>
+                    <div class="resume-container">
+                        <div class="image-s-container">
+                            <img src="../assets/images/IR_header_1.png">
+                        </div>
+                    </div>
+                </ul>
             </div>
-            <div class="body-text">Vitae justo eget magna fermentum. Imperdiet nulla malesuada pellentesque elit eget
-                gravida. Aliquet nec ullamcorper sit amet. Aliquet sagittis id consectetur purus. Ac tortor dignissim
-                convallis aenean. Enim neque volutpat ac tincidunt vitae. Lobortis feugiat vivamus at augue. Platea
-                dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Viverra orci sagittis eu volutpat. Massa
-                tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut.
+
+
+            <hr class="separator-line">
+
+            <h2>Freq-ShiftedNet架構圖</h2>
+            <div class="resume-container">
+                <div class="image-container centered-image">
+                    <img src="../assets/images/IR_3.png" alt="Your Resume Image">
+                </div>
+
             </div>
+            <div class="description-container">
+                <p> 整體生成器架構如圖所示，我們的生成模型包括Encoder(A)、多個Shift-ResNet Block(B)和Decoder(C)，
+                    生成器的輸入為一張可見光圖像，輸入至模型後會產生出一張對應的紅外線影像。
+                </p>
+            </div>
+            <hr class="separator-line">
+
+            <div class="resume-container">
+                <div class="image-container">
+                    <img src="../assets/images/IR_Disc_1.png">
+                </div>
+                <div class="description-container">
+                    <h2>鑑別器(Discirminator)架構圖</h2>
+                    <p> Discriminator則由多個Encoder組成，鑑別器的輸入則為一組成對的影像，
+                        包括可見光影像和其轉換後的紅外線影像。 </p>
+                    <div class="image-container">
+                        <img src="../assets/images/IR_Disc_2.png">
+                    </div>
+                </div>
+            </div>
+            <hr class="separator-line">
+
+            <h2>Freq-ShiftedNet Loss Function</h2>
+            <div class="resume-container">
+                <div class="image-m-container centered-image">
+                    <img src="../assets/images/IR_loss.png.">
+                </div>
+
+            </div>
+            <div class="resume-container">
+                <div class="image-s-container centered-image">
+                    <img src="../assets/images/IR_loss_lambda.png.">
+                </div>
+            </div>
+
+            <div class="description-container">
+                <p> λ_SSIM 、λ_LPIPS 、λ_MPNCE 、λ_GP 、λ_Sobel分別代表了生成器的Loss Function的權重，</br>
+                    我們將λ_SSIM 、λ_LPIPS 、λ_MPNCE 、λ_GP 設為50，而λ_Sobel設為10。
+                </p>
+            </div>
+            <hr class="separator-line">
+
+            <h2>KAIST資料集</h2>
+            <div class="resume-container">
+                <div class="image-container">
+                    <img src="../assets/images/IR_dataset_table.png">
+                </div>
+                <div class="image-container">
+                    <img src="../assets/images/IR_KAIST.png">
+                </div>
+            </div>
+            <div class="description-container">
+                <p>
+                    KAIST資料集包含12個不同場景的視頻，其中有白天的校園和城市場景，以及夜晚的街道和城市場景。
+                    影片皆為解析度640×512，波長範圍為7.5到13微米，且皆為每秒20幀所錄製。<br>
+                    KAIST資料集所包含的不同場景和光線條件能夠提供豐富的訓練樣本，
+                    這將有助於模型更好地理解並應對各種環境條件。</p>
+            </div>
+            <hr class="separator-line">
+
+
+            <!-- Result and table -->
+            <h2>KAIST資料集上各種模型的比較結果</h2>
+            <div class="resume-container">
+                <div class="image-container centered-image">
+                    <img src="../assets/images/IR_result_1.png">
+                </div>
+            </div>
+            <div class="resume-container">
+                <div class="image-container centered-image">
+                    <img src="../assets/images/IR_result_1_night.png">
+                </div>
+            </div>
+            <div class="description-container">
+
+                <p> 在上圖中，第一和第二列分別代表可見光影像和對應的紅外線影像。<br>
+                    A：InfraGAN。<br>
+                    B：具有修改Loss Function的Unet<br>
+                    C：我們提出的Freq-ShiftedNet<br>
+                    尤其在複雜的白天場景中，與Unet相比，Freq-ShiftedNet能夠準確地展現出結構，其SSIM與LPIPS的數據於下表所述
+                </p>
+                <div class="image-m-container">
+                    <img src="../assets/images/IR_result_1_table.png">
+                </div>
+            </div>
+
+            <hr class="separator-line">
+            <!-- COnclusion -->
+            <h2>結論</h2>
+            <ul>
+                <ul>
+                    <li>提出了Freq-ShiftedNet模型並且整合了Wavelet Feature</li>
+                    <li>定義了新的Loss Function並調整其對應權重</li>
+                    <li>在Discriminator中使用了Projection的方法來融合Wavelet Feature</li>
+                    <li>在KAIST資料集中進行測試，相比於InfraGAN<br>
+                           SSIM為0.825，增加了5.4%，LPIPS為0.228，降低了41.3%。</li>
+                </ul>
+            </ul>
+
         </div>
     </div>
 
-    <!-- IMAGE GALLERY -->
-    <div id="project-gallery">
-        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
-        <div class="subheader-text">Image Gallery</div>
-        <div class="project-gallery-content">
-            <!--
-              TODO
 
-              This is where the images in the gallery live. Here's a simple gallery image for you to copy:
+    <div class="buttonp-container">
+        <a class="button" href="Fingerprint.html">
+            <image src="/assets/icons/arrow-left.png" class="right-arrow-icon"/>
+            <span class="button-text">屏幕下指紋心律偵測</span>
+        </a>
 
-              Full Width Image:
-
-                <div class="gallery-image-container">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              Half Width Image:
-
-                <div class="gallery-image-container half-width">
-                  <img src="../assets/images/IMAGE_NAME" class="gallery-image">
-                  <span class="image-caption">IMAGE_CAPTION</span>
-                </div>
-
-              - To add an image to the this area, copy one of the above, paste it below this comment, and change the following:
-                  - IMAGE_NAME: the name of the image file in assets/images
-                  - IMAGE_CAPTION: to the caption of the image
-            -->
-            <div class="gallery-image-container half-width">
-                <img src="../assets/images/code.jpeg" class="gallery-image">
-                <span class="image-caption">Give your image a caption. People love context.</span>
-            </div>
-            <div class="gallery-image-container half-width">
-                <img src="../assets/images/sketchbook.jpeg" class="gallery-image">
-                <span class="image-caption">Give your image a caption. People love context.</span>
-            </div>
-            <div class="gallery-image-container">
-                <img src="../assets/images/camera.jpeg" class="gallery-image">
-                <span class="image-caption">Give your image a caption. People love context.</span>
-            </div>
-        </div>
+        <a class="button" href="RPPG.html.html">
+            <span class="button-text">遠端即時心律測量系統</span>
+            <image src="/assets/icons/arrow-right (1).png" class="right-arrow-icon"/>
+        </a>
     </div>
+
 </div>
-<!-- FOOTER -->
-<div id="footer">
-    <!--
-      TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram)
-
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
-    </a>
-    <!--
-      TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter)
-
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-    </a>
-    <!--
-      TODO - Change the email after "mailto" to your contact email
-
-      This should be the same across all pages.
-    -->
-    <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
-    </a>
-</div>
-
 </body>
 </html>
