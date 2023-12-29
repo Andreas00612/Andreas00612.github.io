@@ -273,18 +273,20 @@ body {
     display: block;
 }
 
-
-.image-ex-container img {
-    width: 120%;
-    height: 100%;
-    display: block;
+.image-m-container {
+    flex: 1;
+    overflow: hidden;
 }
 
 .image-m-container img {
     width: 70%;
     height: auto;
     display: block;
+}
 
+.image-s-container {
+    flex: 1;
+    overflow: hidden;
 }
 
 .image-s-container img {
