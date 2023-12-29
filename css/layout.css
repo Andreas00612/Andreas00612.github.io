@@ -284,12 +284,13 @@ body {
     width: 70%;
     height: auto;
     display: block;
+
 }
 
 .image-s-container img {
     width: 50%;
     height: auto;
-    display: block;
+
 }
 
 .description-container {
@@ -297,8 +298,8 @@ body {
     padding-left: 20px;
     box-sizing: border-box;
     position: relative;
-}
 
+}
 
 
 .centered-image {
@@ -312,4 +313,26 @@ body {
     height: 2px;
     background-color: black;
     margin: 20px 0;
+}
+
+.IRheader-text {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#keywordContainer {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.keyword {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 4px;
 }

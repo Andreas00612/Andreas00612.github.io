@@ -18,7 +18,8 @@
 <!-- NAVBAR -->
 <div class="navbar">
     <a class="nav-title-link" href="../index.html">
-        <span class="nav-title">Portfolio Title</span>
+        <image src="/assets/icons/home.png" class="right-arrow-icon"/>
+        <span class="nav-title">Home</span>
     </a>
 </div>
 
@@ -26,90 +27,99 @@
 <div id="main-content">
     <!-- PROJECT HEADER -->
     <div id="project-header">
-        <div class="main-title">rPPG 遠端即時心律測量系統</div>
-        <div class="body-text">利用網路攝影機偵測額頭與臉頰，透過模型轉換成RPPG的訊號並輸出心率
+        <div class="main-title">rPPG 遠端即時心率測量系統
+        </div>
+        <div class="subheader-text">《FreqShifted-Net：Frequency-Aware Axial-ShiftedNet
+            in Generative Adversarial Networks for Visible-to-Infrared Image》
         </div>
         <image class="project-header-image" src="../assets/images/rppg_header.png">
+            <span class="subheader-text ">
+                利用網路攝影機偵測額頭與臉頰，透過模型轉換成RPPG的訊號並輸出心率<br>
+                使用程式：Python</span>
+            <hr class="separator-line">
     </div>
 
     <div id="project-details">
-        <div class="custom-style-pro">使用程式：Python
+        <div class="custom-style-pro">
+            <div class="resume-container">
+                <div class="image-container">
+                    <img src="../assets/images/rppg_Siamese.png">
+                </div>
+                <div class="description-container">
+                    <div class="IRheader-text">Siamese-rPPG Network的架構概念</div>
+                    <p> Siamese-rPPG Network之所以特別，是因為其將額頭和臉頰視為網路的輸入，
+                        並且以共享權重(Share Weight)的方式進行訓練。
+                        這樣的設計允許額頭和臉頰的訊號相互補充，彌補彼此訊號的缺失。
+                        例如，對於一些可能有瀏海的人，可以透過臉頰的訊號可以進行修正。</p>
+                </div>
+            </div>
+            <hr class="separator-line">
 
-            <h2>特色與說明</h2>
+
+            <h2>Siamese-Network 架構圖</h2>
+            <div class="resume-container">
+                <div class="image-container centered-image">
+                    <img src="../assets/images/rppg_arch.png">
+                </div>
+
+            </div>
+            <div class="description-container">
+                <p> 整體生成器架構如圖所示，132456123156813
+                </p>
+            </div>
+            <hr class="separator-line">
+
+
+            <div class="resume-container">
+                <div class="image-container">
+                    <img src="../assets/images/rppg_flowchart.png">
+                </div>
+                <div class="description-container">
+                    <div class="IRheader-text">Real-time 流程</div>
+                    <p> D當開啟相機後。先使用OpenCV偵測是否有臉部存在，若有偵測到人臉，
+                        取得臉部位置座標並向後連續切256帧後concat在一起，
+                        丟進訓練好的模型後取得轉換後的rPPG訊號，並透過FFT轉換成心律;
+                        此方法為Non-overlapping，若欲取得下次數據，需重複以上動作(Figure 13)。</p>
+                </div>
+            </div>
+            <hr class="separator-line">
+
+
             <div class="feature-description">
+                <!-- COnclusion -->
+                <div class="demo-title">結論</div>
+                <br>
                 <ul>
-                    <li>遠距離測量無接觸式裝置</li>
-                    <li>利用模型與自注意力機制穩定rPPG訊號的轉換</li>
+                    <ul>
+                        <li>使用Siamese-rppg網路進行實驗並導入Spatial-attention，以提高ROI的準確性</li>
+                        <li>在Real-time時，採用Non-Overlapping的形式已獲得最好的表現</li>
+                        <li>在訓練時使用使用600幀（20fps，約30秒）進行訓練，避免過長的等待時間導致臉部過度晃動</li>
+                        <li>在Real-time時，採用256帧進行實驗，測量速度快且誤差保持在5以內。</li>
+                    </ul>
                 </ul>
             </div>
 
-            <h2>第一階段 - 影像資訊收集與處理</h2>
-            <div class="feature-description">
-                <ul>
-                    <li>收集影像資訊：
-                        <div class="body-text">
-                            <ul>
-                                <li>來自無接觸式裝置（例如攝像頭）讀取影像資訊。</li>
-                            </ul>
-                        </div>
-                    </li>
 
-                    <li>綠色通道遮罩：
-                        <ul>
-                            <li>對收集到的影像進行綠色通道的遮罩，以提取有效的PPG信息。</li>
-                            <li>綠色光在血液中的吸收和反射特性較高，更能反映心跳的變化，增強PPG信號的可見度。</li>
-                        </ul>
-                    </li>
-                    <li>權重分配：
-                        <ul>
-                            <li>為影像中的不同區域分配不同的權重，用於計算加權區域的PPG信號。</li>
-                        </ul>
-                    </li>
-                </ul>
+        </div>
+        <hr class="separator-line">
+        <div id="project-gallery">
+
+            <div class="demo-title mt-0">Demo</div>
+            <div class="project-gallery-content">
+
+                <div class="gallery-image-container half-width">
+                    <img src="../assets/images/rppg_demo.PNG" class="gallery-image">
+                    <span class="image-caption">利用指夾式心率來驗證正確與否</span>
+                </div>
+                <div class="gallery-image-container half-width">
+                    <img src="../assets/images/rppg_result.png" class="gallery-image">
+                    <span class="image-caption">我們提出的方法在各項數據上皆有好的表現</span>
+                </div>
+
             </div>
-            <h2>第二階段 - 心率計算與穩定機制</h2>
-            <ul>
-                <li>心率計算：
-                    <ul>
-                        <li>對處理過的心率訊號進行傅立葉轉換，獲得頻率域的訊息。</li>
-                        <li>通過頻率分析檢測心律的周期性變化。</li>
-                    </ul>
-                </li>
-                <li>心率修正機制：
-                    <ul>
-                        <li>引入心率修正機制以提高計算的準確性。</li>
-                        <li>利用先前的心率測量值進行修正，考慮環境條件和其他因素的影響。</li>
-                    </ul>
-                </li>
-                <li>投票機制：
-                    <ul>
-                        <li>使用投票機制提高心率的穩定性。</li>
-                        <li>考慮不同算法或方法的心率計算結果，通過結合多個結果來減少誤差，獲得更穩定和可靠的心率估計。</li>
-                    </ul>
-                </li>
-            </ul>
         </div>
     </div>
 
-    <!-- IMAGE GALLERY -->
-    <div id="project-gallery">
-        <!-- TODO - Change the 'subheader-text' to whatever you want the Gallery section header to say -->
-        <div class="subheader-text">Demo</div>
-        <div class="project-gallery-content">
-
-            <div class="gallery-image-container half-width">
-                <img src="../assets/images/rppg_demo.PNG" class="gallery-image">
-                <span class="image-caption">利用指夾式心律來驗證正確與否</span>
-            </div>
-            <div class="gallery-image-container half-width">
-                <img src="../assets/images/rppg_result.png" class="gallery-image">
-                <span class="image-caption">我們提出的方法在各項數據上皆有好的表現</span>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- FOOTER -->
 
     <div class="buttonp-container">
         <a class="button" href="GAN2.html">
