@@ -54,7 +54,7 @@
           - Change "desktop.jpeg" to the image filename you uploaded in the assets/images folder.
         -->
         <div class="main-title">屏幕下指紋心率測量</div>
-        <div class="body-text">利用手機螢幕進行PPR訊號的偵測，並利用FFT計算頻率並轉換成心率，無需依賴鏡頭和閃光燈
+        <div class="body-text">利用手機螢幕進行PPG訊號的偵測，並利用FFT計算頻率並轉換成心率，在偵測指紋的同時也檢查心率。
         </div>
         <image class="project-header-image" src="../assets/images/HR_architecture.PNG">
     </div>
@@ -67,7 +67,7 @@
       - Add paragraphs using the <div class="body-text"></div> elements in the "project-details-content"
     -->
       <div id="project-details">
-        <div class="custom-style-pro">使用程式：Python
+        <div class="custom-style-pro">使用程式：C/C++, Python
 
             <h2>特色與說明</h2>
             <div class="feature-description">
@@ -91,7 +91,7 @@
                     <li>綠色通道遮罩：
                         <ul>
                             <li>對收集到的影像進行綠色通道的遮罩，以提取有效的PPG信息。</li>
-                            <li>綠色光在血液中的吸收和反射特性較高，更能反映心跳的變化，增強PPG信號的可見度。</li>
+                            ：綠色光在血液中的吸收和反射特性較高，更能反映心跳的變化，增強PPG信號的可見度。</li>
                         </ul>
                     </li>
                     <li>權重分配：
@@ -112,7 +112,7 @@
                 <li>心率修正機制：
                     <ul>
                         <li>引入心率修正機制以提高計算的準確性。</li>
-                        <li>利用先前的心率測量值進行修正，考慮環境條件和其他因素的影響。</li>
+                        <li>利用先前的心率測量值進行修正，減少環境條件和其他因素的影響。</li>
                     </ul>
                 </li>
                 <li>投票機制：
