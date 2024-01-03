@@ -14,8 +14,10 @@
 
     <script defer src="../js/script.js"></script>
 </head>
+
 <body>
 <!-- NAVBAR -->
+
 <div class="navbar">
     <a class="nav-title-link" href="../index.html">
         <image src="/assets/icons/home.png" class="right-arrow-icon"/>
@@ -27,32 +29,19 @@
 <div id="main-content">
     <!-- PROJECT HEADER -->
     <div id="project-header">
-        <div class="main-title">rPPG 遠端即時心率測量系統
-        </div>
+
+        <div class="main-title">rPPG 遠端即時心率測量系統</div>
         <div class="subheader-text">Real-time System for Remote Heart Rate Measurement
         </div>
         <image class="project-header-image" src="../assets/images/rppg_header.png">
-            <span class="subheader-text ">
-                <br>利用網路攝影機偵測額頭與臉頰，透過模型轉換成RPPG的訊號並輸出心率<br>
-                使用程式：Python</span>
+            <span class="subheader-text lead ">
+                <br>利用網路攝影機偵測額頭與臉頰，透過模型轉換成RPPG的訊號並輸出心率</span>
             <hr class="m-0"/>
+
     </div>
 
     <div id="project-details">
         <div class="custom-style-pro">
-            <div class="resume-container">
-                <div class="image-container">
-                    <img src="../assets/images/rppg_net.png">
-                </div>
-                <div class="description-container">
-                    <div class="IRheader-text">Siamese-rPPG Network的架構概念</div>
-                    <p> Siamese-rPPG Network之所以特別，是因為其將額頭和臉頰兩者同時視為網路的輸入，
-                        並且以共享權重(Share Weight)的方式進行訓練。
-                        這樣的設計允許額頭和臉頰的訊號相互補充，彌補彼此訊號的缺失。
-                        例如，對於一些可能有瀏海的人，可以透過臉頰的訊號可以進行修正。</p>
-                </div>
-            </div>
-            <hr class="m-0"/>
 
 
             <h2>Siamese-Network 架構圖</h2>
@@ -64,10 +53,12 @@
             </div>
             <div class="description-container">
                 <p> 整體生成器架構如圖所示，
-                    此模型主要分為兩個架構：(1)Spatial Attention (2)Siamese Network ;
+                    此模型主要分為兩個架構：</br>
+                    (1) Spatial Attention</br>
                     Spatial Attention主要為取代固定選取ROI的方法，
                     利用Attention的架構來讓網路自動找到較多rPPG訊號的區域，利於接下來轉換成PPG訊號的訓練 ;
-                    Siamese Network 主要由3D Convolution 以及 Average Pooling 所組成，
+                    </br>(2) Siamese Network
+                    </br>Siamese Network 主要由3D Convolution 以及 Average Pooling 所組成，
                     藉由神經網路提取特定區域顏色變化並轉換成PPG訊號。
                 </p>
             </div>
@@ -80,10 +71,12 @@
                 </div>
                 <div class="description-container">
                     <div class="IRheader-text">Real-time 流程</div>
-                    <p> 當開啟相機後。先使用OpenCV偵測是否有臉部存在，若有偵測到人臉，
-                        取得臉部位置座標並向後連續切256帧後輸入至模型，
-                        取得轉換後的rPPG訊號，並透過FFT轉換成心律;
-                        因此方法為Non-overlapping，若欲取得下次數據，需重複以上動作。</p>
+                    <p> 開啟相機。</br>
+                        先使用OpenCV偵測是否有臉部存在</br>
+                        若有偵測到人臉</br>
+                        取得臉部位置座標並向後連續切256帧後輸入至模型</br>
+                        取得轉換後的rPPG訊號，並透過FFT轉換成心律;</br>
+                        若欲取得下次數據，需重複以上動作。</p>
                 </div>
             </div>
             <hr class="m-0"/>

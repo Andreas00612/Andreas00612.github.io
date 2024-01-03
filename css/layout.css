@@ -13,6 +13,7 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 
@@ -258,13 +259,14 @@ body {
     display: flex;
     width: 100%;
     flex: 1;
-/ margin-bottom: 20 px;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 .image-container {
     flex: 1;
     overflow: hidden;
+
 }
 
 .image-container img {
@@ -300,7 +302,8 @@ body {
     padding-left: 20px;
     box-sizing: border-box;
     position: relative;
-
+    line-height: 2; /* 調整行距，可以根據需要調整數值 */
+    font-size: 15px; /* 調整字體大小，可以根據需要調整數值 */
 }
 
 
@@ -318,7 +321,7 @@ body {
 }
 
 .IRheader-text {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -337,4 +340,43 @@ body {
     padding: 8px;
     margin: 4px;
     border-radius: 4px;
+}
+
+.title-box {
+    background-color: #bd5d38; /* 橘色背景 */
+    padding: 10px; /* 可根据需要调整内边距 */
+    display: inline-block; /* 使框适应文字大小 */
+    border-radius: 5px; /* 可根据需要调整圆角 */
+}
+
+.title-text {
+    color: #fff; /* 白色文字，与橘色背景形成对比 */
+    margin: 0; /* 清除默认的外边距 */
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #ffa07a; /* 左側區塊的背景顏色 */
+    height: 100vh; /* 設定區塊高度，100vh 表示相對於視窗高度的百分比 */
+    width: 200px; /* 設定區塊寬度 */
+}
+
+.content-wrapper {
+    flex: 1; /* 將內容區域占滿剩餘的空間 */
+    padding: 20px; /* 內容區域的內邊距，可以根據需要調整 */
+}
+
+.wrapper {
+    border: 1px solid #ddd; /* 添加邊框，方便顯示內容區域的範圍 */
+    padding: 10px; /* 內容區域的內邊距，可以根據需要調整 */
+}
+
+a {
+    display: block;
+    margin-bottom: 10px; /* 設定連結之間的下邊距，可以根據需要調整 */
+    text-decoration: none;
+    color: #333; /* 設定連結顏色，可以根據需要調整 */
 }
